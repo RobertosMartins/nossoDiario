@@ -11,6 +11,28 @@ public class Logout extends AppCompatActivity implements View.OnClickListener {
 
     Button bLogout;
     EditText etName, etAge, etUsername;
+    UserLocalStore userLocalStore;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (authenticate() == true) {
+            displayUserDetails();
+        } else {
+        }
+    }
+
+    private void displayUserDetails() {
+        User user = userLocalStore.getLoggedInUser();
+        etUsername.setText(user.name);
+        etName.setText(user.name);
+        etAge.setText(user.age + "");
+    }
+
+    private boolean authenticate() {
+        return userLocalStore.getUserLoggedIn();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +47,18 @@ public class Logout extends AppCompatActivity implements View.OnClickListener {
 
         bLogout.setOnClickListener(this);
 
+        userLocalStore = new UserLocalStore(this);
 
     }
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bLogout:
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
+
                 startActivity(new Intent(this, Login.class));
                 break;
         }

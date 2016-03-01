@@ -10,10 +10,11 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
-     Button bLogin;
-     EditText etUsername, etPassword;
-     TextView tvRegisterLink;
+    Button bLogin;
+    EditText etUsername, etPassword;
+    TextView tvRegisterLink;
 
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +28,24 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         bLogin.setOnClickListener(this);
         tvRegisterLink.setOnClickListener(this);
+        userLocalStore = new UserLocalStore(this);
 
+    }
+
+    public User setUser() {
+        String username = etUsername.getText().toString();
+        String password = etPassword.getText().toString();
+        return new User(username, password);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bLogin:
+                User user = new User(null, null);
+
+                userLocalStore.storeUserData(user);
+                userLocalStore.setUserLoggedIn(true);
 
                 break;
 

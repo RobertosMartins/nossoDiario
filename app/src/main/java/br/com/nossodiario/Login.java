@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
-    Button bLogin;
-    EditText etUsername, etPassword;
-    TextView tvRegisterLink;
+    private Button bLogin;
+    private EditText etUsername, etPassword;
+    private TextView tvRegisterLink;
 
 
     @Override
@@ -38,7 +38,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.tvRegisterLink:
-//                startActivity(new Intent(this, Register.class));
+
+                startActivity(new Intent(this,Register.class));
                 break;
 
         }

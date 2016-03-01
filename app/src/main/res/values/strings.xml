@@ -5,4 +5,13 @@
     <string name="navigation_drawer_close">Fechar</string>
 
     <string name="action_settings">Configurações</string>
+    <string name="username">usuário</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="logout">Sair</string>
+    <string name="name">Nome</string>
+    <string name="age">Idade</string>
+    <string name="register">Registrar</string>
+    <string name="registerHere">Cadastre-se</string>
+
 </resources>

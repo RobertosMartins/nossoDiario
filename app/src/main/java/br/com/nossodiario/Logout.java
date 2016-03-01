@@ -32,7 +32,7 @@ public class Logout extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bLogout:
-//                startActivity(new Intent(this, Login.class));
+                startActivity(new Intent(this, Login.class));
                 break;
         }
     }

@@ -15,11 +15,19 @@
     <string name="register">Registrar</string>
     <string name="registerHere">Cadastre-se</string>
 
-    <string name="desc_username">usuário</string>
-    <string name="desc_password">Senha</string>
-    <string name="desc_login">Login</string>
+    <string name="desc_username">Digite o username</string>
+    <string name="desc_password">Digite a Senha</string>
+    <string name="desc_login">Digite o Login</string>
     <string name="desc_logout">Sair</string>
-    <string name="desc_name">Nome</string>
-    <string name="desc_age">Idade</string>
+    <string name="desc_name">Digite o Nome</string>
+    <string name="desc_age">Digite a Idade</string>
+
+    <string name="string_import">Importar</string>
+    <string name="gallery">Galeria</string>
+    <string name="slideshow">Apresentação</string>
+    <string name="tools">Ferramentas</string>
+    <string name="communicate">Comunicação</string>
+    <string name="share">Compartilhar</string>
+    <string name="send">Enviar</string>
 
 </resources>
